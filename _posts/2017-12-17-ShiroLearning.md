@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "利用jekyll和github搭建个人静态博客"
-date: 2017-12-17 
+title: "Shiro学习笔记"
+date: 2017-12-17
 description: "搭建自己的博客"
-tag: 博客 
---- 
+tag: 博客
+---
 
 # Shiro的学习笔记 一
 
