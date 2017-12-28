@@ -39,26 +39,28 @@ Spring的优点
 - IoC：inverse of control，即控制反转；
 简单的说，就是把对象的实例化工作交给容器来完成
 
-		Spring的使用:
 
-		1,导入相关jar包(beans/core);
+	Spring的使用:
 
-		2,导入依赖包(common-logging)
+	1,导入相关jar包(beans/core);
 
-		3,配置XML文件(作用:告诉spring帮我管理哪些bean);
+	2,导入依赖包(common-logging)
 
-			1,在classpath下,application.xml/applicationContext.xml;
+	3,配置XML文件(作用:告诉spring帮我管理哪些bean);
 
-			2,<beans><bean id="" class="" /></beans>
+		1,在classpath下,application.xml/applicationContext.xml;
 
-		4,使用容器:
+		2,<beans><bean id="" class="" /></beans>
 
-			1,创建一个资源文件对象(ClasspathResource);
-			2,创建一个BeanFactory(Spring的容器);创建一个基于XML的BeanFactory:XmlBeanFactory,传入XML配置文件资源对象;
-			3,从容器中拿对象:
-				1,getBean(Class):按照类型拿bean;
-				2,getBean(String):按照名字拿bean;
-				3,getBean(String,Class):按照名字和类型拿;(推荐)【类型需要是接口的类型】
+	4,使用容器:
+
+		1,创建一个资源文件对象(ClasspathResource);
+		2,创建一个BeanFactory(Spring的容器);创建一个基于XML的BeanFactory:XmlBeanFactory,传入XML配置文件资源对象;
+		3,从容器中拿对象:
+			1,getBean(Class):按照类型拿bean;
+			2,getBean(String):按照名字拿bean;
+			3,getBean(String,Class):按照名字和类型拿;(推荐)【类型需要是接口的类型】
+
 注意:从容器里面拿对象一定要使用接口去拿对象,不能直接使用真实的实现类
 
 	分析Spring的加载过程:
@@ -156,10 +158,12 @@ bean的初始化&销毁
 推荐加上jdbc. 这样加载时也写上jdbc. 程序可以定位加载jdbc的对应数据后续的system-properties-mode="NEVER" 这句话不写也可以.
 
 
-	jdbc.driverClassName=com.mysql.jdbc.Driver
-	jdbc.url=jdbc:mysql:///CRM
-	jdbc.username=root
-	jdbc.password=admin
+
+		jdbc.driverClassName=com.mysql.jdbc.Driver
+		jdbc.url=jdbc:mysql:///CRM
+		jdbc.username=root
+		jdbc.password=admin
+
 
 property placeholder (属性占位符)
 
