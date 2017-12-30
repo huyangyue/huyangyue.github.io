@@ -123,7 +123,7 @@ ApplicationConfig类
 
 1.建立application.properties资源文件放入resources里面
 
-    jdbc.driver=com.mysql.jdbc.Driver
+    jdbc.driverClassName=com.mysql.jdbc.Driver
     jdbc.url=jdbc:mysql:///p2p
     jdbc.username=root
     jdbc.password=admin
@@ -265,7 +265,7 @@ ApplicationConfig类
 
 2，application-tx.xml
 
-    <tx:advice id="advice" transaction-manager="transactionManager">
+    <tx:advice id="advice" transaction-manager="txManager">
   		<tx:attributes>
   			<tx:method name="list*" read-only="true" />
   			<tx:method name="get*" read-only="true" />
